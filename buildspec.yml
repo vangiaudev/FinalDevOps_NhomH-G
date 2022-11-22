@@ -1,0 +1,15 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - echo "creating scripts folder"
+      - mkdir -p ./scripts/
+  build:
+    commands:
+      - echo "Copying the file"
+      - cp index.html ./scripts/
+artifacts:
+  files:
+    - scripts/**/*
+    - appspec.yml
